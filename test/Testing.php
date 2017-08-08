@@ -8,7 +8,7 @@ class Testing
         if ($expected !== $have) {
             echo $message .': '. $have . ' is not equals ' . $expected.\PHP_EOL;
         }else{
-            echo 'passed';
+            echo 'passed'.\PHP_EOL;
         }
     }
 }
