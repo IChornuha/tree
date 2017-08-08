@@ -8,6 +8,7 @@ class LinkedList
 {
     private $repo = [];
     private $link = 0;
+    private $last = 0;
 
 /**
  * Adding to list
@@ -17,14 +18,14 @@ class LinkedList
  */
     public function add(ListItem $value)
     {
-
+        $this->last = $this->link;
         $this->repo[$this->link] = $value;
         $this->link = $value->next();
     }
     
     public function getLast()
     {
-        $l = $this->repo[$this->link--];
+        $l = $this->repo[$this->last];
         return $l;
     }
 
