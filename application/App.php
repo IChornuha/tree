@@ -1,22 +1,22 @@
 <?php
 declare(strict_types=1);
 namespace application;
+use application\Tree;
 
 class App
 {
-    private $unsortedTree;
-    public function __construct($unsortedTree)
+    private $incomeParamArray;
+    public function __construct($incomeParamArray)
     {
-        $this->unsortedTree = $unsortedTree;
+        $this->incomeParamArray = $incomeParamArray;
     }
 
     public function run()
     {
         printf('Runing app'.PHP_EOL);
-        $tree = new \application\Tree();
-        foreach ($this->unsortedTree as $nodeKey => $nodeValue) {
+        $tree = new Tree();
+        foreach ($this->incomeParamArray as $nodeKey => $nodeValue) {
             $tree->insert($nodeKey, $nodeValue->getAll());
-            // $tree->root->
         }
 
 
