@@ -9,7 +9,7 @@ use application\LinkedList;
 printf('We start now,  %s' . PHP_EOL, date('H:i:s'));
 $maxNodes = $argv[1];
 $leavesOnNode = $argv[2];
-// Creating list of leaf for each 
+// Creating list of leaves for each node
 $nodes = [];
 for ($k = 0; $k <= (int)$maxNodes; $k++) {
     $list = new LinkedList();
