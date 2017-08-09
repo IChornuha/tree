@@ -13,7 +13,11 @@ Start.  Linked list test
       test 'get()': passed
 ```
 
-## Not ready yet
+## Partially ready
 ### Usage:
-`php index.php count-of-nodes count-of-leafs-for-node`
+`index.php count-of-nodes count-of-leafs-for-node`
 
+## Issues:
+* Printing of tree 
+* Income params parsing by flag
+* --help command
