@@ -7,3 +7,6 @@ $linkedListTest = new \test\LinkedListTest();
 echo '  Linked list test'.PHP_EOL;
 echo '      test \'add()\': ';
 $linkedListTest->testAddFunc();
+
+echo '      test \'get()\': ';
+$linkedListTest->testGetFunc();
