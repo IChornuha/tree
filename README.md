@@ -20,4 +20,4 @@ Start.  Linked list test
 ## Issues:
 * Printing of tree 
 * Income params parsing by flag
-* --help command
+* ~~--help command~~ Done
