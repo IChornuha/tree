@@ -6,7 +6,7 @@ require '__autoload.php';
 use application\App;
 use application\LinkedList;
 
-if ($argc>1 && $argc < 3) {
+if ($argc>1 && $argc <= 3) {
     if ($argv[1]==='--help') {
         printf('usage: filename(e.g. %s) N L %2$s   N - count of tree nodes%2$s   L - count of leaves for each%2$s',
         $argv[0], PHP_EOL);
