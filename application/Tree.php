@@ -51,7 +51,6 @@ class Tree
 
     protected function getFirstUnsafeItemIndex($node)
     {
-        $this->unpackNodeChilds($node);
         if ($this->bucketOfLeaves !== null) {
             $node->child = array_merge($node->child, $this->bucketOfLeaves);
         }
@@ -81,8 +80,9 @@ class Tree
 
     protected function prepareNode(&$node)
     {
+        $this->unpackNodeChilds($node);
         if (array_sum($node->child) > $this->totalChildValueSum) {
-            $firstUnsafeItemIndex = $this->getFirstUnsafeItemIndex($node);        
+            $firstUnsafeItemIndex = $this->getFirstUnsafeItemIndex($node);
             $newNodeChilds = array_slice($node->child, 0, $firstUnsafeItemIndex);
             $unnecessaryNodeChilds = array_slice($node->child, $firstUnsafeItemIndex);
             $node->child = $newNodeChilds;
