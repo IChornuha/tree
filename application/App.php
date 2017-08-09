@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 namespace application;
+
 use application\Tree;
 
 class App
@@ -20,7 +21,6 @@ class App
         $tree->flushBucketOfLeaves();
 
         print_r($tree);
-
         printf('Done'.PHP_EOL);
     }
 }
