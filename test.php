@@ -10,3 +10,10 @@ $linkedListTest->testAddFunc();
 
 echo '      test \'get()\': ';
 $linkedListTest->testGetFunc();
+
+
+$treeTest = new \test\TreeTest();
+echo '  Tree test'.PHP_EOL;
+echo '      test \'getFirstUnsafeItemIndex()\': ';
+$treeTest->testGetFirstUnsaveIndexFunc();
+
