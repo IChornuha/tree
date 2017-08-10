@@ -35,7 +35,13 @@ class Tree
         }
     }
 
-    protected function sortNodeChild(&$node)
+    /**
+     * Simple bubble sort
+     *
+     * @param Node $node
+     * @return void
+     */
+    protected function sortNodeChild(Node &$node)
     {
         for ($i = 0; $i < count($node->child) - 1; $i++) {
             for ($j = 0; $j < count($node->child) - 1; $j++) {
@@ -49,7 +55,12 @@ class Tree
         }
     }
 
-    protected function getFirstUnsafeItemIndex($node)
+    /**
+     * Method getFirstUnsafeItemIndex return index of item in node->child array
+     * contained value wich violates the followed rule:
+     * array_sum(node->child) < totalChildValueSum
+     */
+    protected function getFirstUnsafeItemIndex($node):int
     {
         if ($this->bucketOfLeaves !== null) {
             $node->child = array_merge($node->child, $this->bucketOfLeaves);
@@ -68,7 +79,14 @@ class Tree
         return $k;
     }
 
-    protected function unpackNodeChilds(&$node)
+    /**
+     * Unpack Node child attribute array of ListItem instances
+     * in to flat array of their values
+     *
+     * @param Node $node
+     * @return void
+     */
+    protected function unpackNodeChilds(Node &$node)
     {
         foreach ($node->child as $key => &$value) {
             /**
